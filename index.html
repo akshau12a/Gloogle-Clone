@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- For importing Google fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    rel="stylesheet"
+  />
+  <!-- Linking CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <title>Google UI Clone</title>
+</head>
+<body>
+  <!-- Header starts -->
+  <div class="header">
+    <div class="header_left">
+      <a href="https://about.google/" target="_blank">About</a>
+      <a href="https://store.google.com/" target="_blank">Store</a>
+    </div>
+    <div class="header_right">
+      <a href="https://mail.google.com/" target="_blank">Gmail</a>
+      <a href="https://www.google.com/imghp" target="_blank">Images</a>
+      <a href="https://www.google.com/experimental/" target="_blank">
+        <span class="material-symbols-outlined"> experiment </span>
+      </a>
+      <a href="https://www.google.com/intl/en/about/products/" target="_blank">
+        <span class="material-symbols-outlined"> apps </span>
+      </a>
+      <a href="https://myaccount.google.com/" target="_blank">
+        <span class="material-symbols-outlined"> account_circle </span>
+      </a>
+    </div>
+  </div>
+  <!-- Header Ends -->
+
+  <!-- Main Body Starts -->
+  <div class="mainBody">
+    <img
+      src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+      alt="Google Logo"
+    />
+
+    <!-- Search Starts -->
+    <div class="search">
+      <div class="search__input">
+        <span class="material-symbols-outlined"> search </span>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Type your query and press Enter..."
+        />
+        <span class="material-symbols-outlined"> mic </span>
+      </div>
+    </div>
+    <!-- Search Ends -->
+  </div>
+  <!-- Main Body Ends -->
+
+  <!-- JavaScript -->
+  <script>
+    // Select the input field
+    const searchInput = document.getElementById("searchInput");
+
+    // Event listener for pressing the "Enter" key
+    searchInput.addEventListener("keypress", (event) => {
+      if (event.key === "Enter") {
+        const query = searchInput.value.trim(); // Get the query
+        if (query) {
+          // Redirect to Google search results page
+          window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+        } else {
+          alert("Please enter a search query!");
+        }
+      }
+    });
+  </script>
+</body>
+</html>
