@@ -9,5 +9,3 @@ This project is a clone of the Google homepage, built using **HTML**, **CSS**, a
 - **Interactive Icons**: Includes Google Material Icons for a polished look.
 - **Responsive Design**: Adapts to various screen sizes.
 
-## Project Structure
-
